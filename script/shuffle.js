@@ -20,12 +20,15 @@ function shuffle() {
     gridArr.splice(randomIndex, 1);
   }
   gridArr = shuffledArr;
+  // enable the #sortBtn button
+  document.querySelector('#sortBtn').disabled = false;
   render();
 }
 
 //function to sort the gridArr
 function sort() {
   gridArr.sort((a, b) => a.value - b.value);
+  document.querySelector('#sortBtn').disabled = true;
   render();
 }
 
